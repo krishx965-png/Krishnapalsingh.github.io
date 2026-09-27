@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishnapal Singh Chauhan | Impact & M&E Specialist</title>
+<meta name="description" content="Krishnapal Singh Chauhan — District Impact Specialist working across rural education, monitoring, data quality and field operations in Madhya Pradesh.">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root{
+  --ink:#15221f;
+  --muted:#61706b;
+  --paper:#f7f8f4;
+  --white:#ffffff;
+  --line:#dfe5df;
+  --accent:#0d7c66;
+  --accent-dark:#075a4b;
+  --soft:#e9f3ef;
+  --warm:#f3eee2;
+  --shadow:0 18px 55px rgba(21,34,31,.09);
+  --radius:22px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:"DM Sans",sans-serif;color:var(--ink);background:var(--paper);line-height:1.65}
+a{color:inherit;text-decoration:none}
+.container{width:min(1120px,calc(100% - 40px));margin:auto}
+
+/* NAV */
+.site-header{position:sticky;top:0;z-index:20;background:rgba(247,248,244,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(223,229,223,.8)}
+.nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{font-family:"Space Grotesk";font-size:25px;font-weight:700;letter-spacing:-1px}
+.brand span{color:var(--accent)}
+.nav-links{display:flex;gap:28px;font-size:14px;color:#4d5c57}
+.nav-links a:hover{color:var(--accent)}
+.nav-cta{padding:10px 17px;border:1px solid var(--ink);border-radius:999px;font-size:14px;font-weight:600}
+.nav-cta:hover{background:var(--ink);color:white}
+
+/* HERO */
+.hero{padding:88px 0 74px;background:
+ radial-gradient(circle at 82% 15%,rgba(13,124,102,.12),transparent 31%),
+ radial-gradient(circle at 15% 90%,rgba(243,238,226,.8),transparent 30%)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:center}
+.kicker,.section-kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:var(--accent)}
+.hero h1{font-family:"Space Grotesk";font-size:clamp(43px,5.5vw,72px);line-height:1.02;letter-spacing:-3px;max-width:760px;margin:15px 0 25px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero-copy{font-size:19px;color:var(--muted);max-width:720px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin:31px 0 35px}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 21px;border-radius:999px;font-weight:700;font-size:14px;transition:.2s}
+.btn-primary{background:var(--accent);color:white;box-shadow:0 10px 25px rgba(13,124,102,.2)}
+.btn-primary:hover{background:var(--accent-dark);transform:translateY(-2px)}
+.btn-light{border:1px solid var(--line);background:white}
+.btn-light:hover{border-color:var(--accent);color:var(--accent)}
+.stats{display:flex;gap:35px;flex-wrap:wrap}
+.stat strong{font-family:"Space Grotesk";font-size:27px;display:block}
+.stat span{font-size:12px;color:var(--muted)}
+
+.profile-card{background:var(--white);border:1px solid var(--line);border-radius:30px;padding:28px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.profile-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:var(--soft);right:-75px;top:-70px}
+.photo-wrap{position:relative;width:100%;aspect-ratio:1/1;max-width:315px;margin:0 auto 22px;border-radius:24px;overflow:hidden;background:linear-gradient(135deg,#dcece7,#f2eee4);display:flex;align-items:center;justify-content:center}
+.photo-wrap img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2}
+.photo-fallback{font-family:"Space Grotesk";font-size:70px;font-weight:700;color:var(--accent);position:absolute}
+.profile-role{font-size:11px;letter-spacing:1.8px;color:var(--accent);font-weight:700;text-transform:uppercase}
+.profile-card h2{font-family:"Space Grotesk";font-size:25px;line-height:1.15;margin:6px 0}
+.profile-card p{color:var(--muted);font-size:14px}
+.tag-list{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.tag{font-size:11px;padding:6px 9px;background:var(--soft);border-radius:999px;color:var(--accent-dark)}
+
+/* STRIP */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:white}
+.strip-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:19px 0;color:#65726e;font-size:12px;font-weight:600}
+.strip-inner span:before{content:"•";color:var(--accent);margin-right:8px}
+
+/* SECTIONS */
+.section{padding:96px 0}
+.section-alt{background:white;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin:8px 0 40px}
+h2{font-family:"Space Grotesk";font-size:clamp(33px,4vw,48px);letter-spacing:-2px;line-height:1.08;margin-top:7px}
+.lede{color:var(--muted);max-width:600px;margin-top:12px}
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:85px}
+.about-copy p{color:var(--muted);font-size:17px;margin-top:22px}
+.fact-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.fact{background:white;border:1px solid var(--line);border-radius:18px;padding:23px}
+.fact b{font-family:"Space Grotesk";font-size:29px;display:block;color:var(--accent)}
+.fact span{font-size:13px;color:var(--muted)}
+.fact-grid .fact:nth-child(3),.fact-grid .fact:nth-child(4){background:var(--warm)}
+
+/* WORK */
+.work-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:38px}
+.work-card{background:white;border:1px solid var(--line);border-radius:22px;padding:27px;min-height:250px;transition:.2s}
+.work-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}
+.work-card.featured{background:var(--ink);color:white;border-color:var(--ink)}
+.work-no{font-family:"Space Grotesk";font-size:13px;color:var(--accent);font-weight:700}
+.featured .work-no{color:#8bd6c3}
+.work-card h3{font-family:"Space Grotesk";font-size:22px;line-height:1.15;margin:17px 0 11px}
+.work-card p{color:var(--muted);font-size:14px}
+.featured p{color:#bdc9c5}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:20px}
+.pill{font-size:11px;padding:5px 9px;border-radius:999px;background:var(--soft);color:var(--accent-dark)}
+.featured .pill{background:#263b35;color:#ccece4}
+
+/* EXPERIENCE */
+.timeline{position:relative;margin-top:42px;padding-left:26px}
+.timeline:before{content:"";position:absolute;left:5px;top:7px;bottom:7px;width:1px;background:#ccd7d2}
+.timeline-item{position:relative;display:grid;grid-template-columns:170px 1fr;gap:40px;padding:0 0 43px}
+.timeline-item:before{content:"";position:absolute;left:-26px;top:6px;width:10px;height:10px;background:var(--accent);border-radius:50%;box-shadow:0 0 0 5px var(--paper)}
+.period{font-size:12px;font-weight:700;color:var(--accent);letter-spacing:.4px}
+.timeline-item h3{font-family:"Space Grotesk";font-size:23px;line-height:1.15}
+.org{font-weight:600;color:#485852;margin:5px 0 8px}
+.timeline-item p:last-child{font-size:14px;color:var(--muted);max-width:700px}
+
+/* SKILLS */
+.skills-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:40px}
+.skill-card{border:1px solid var(--line);background:var(--paper);border-radius:19px;padding:23px}
+.skill-card h3{font-family:"Space Grotesk";font-size:17px;margin-bottom:13px}
+.skill-card ul{list-style:none;color:var(--muted);font-size:13px}
+.skill-card li{padding:5px 0;border-bottom:1px solid #e4e8e4}
+.skill-card li:last-child{border:0}
+
+/* PUBLICATIONS */
+.pub-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:35px}
+.pub{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:27px;min-height:235px;display:flex;flex-direction:column;transition:.2s}
+.pub:hover{transform:translateY(-4px);border-color:#b9cbc5;box-shadow:var(--shadow)}
+.pub-label{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--accent);font-weight:700}
+.pub h3{font-family:"Space Grotesk";font-size:22px;line-height:1.15;margin:15px 0 9px}
+.pub p{font-size:14px;color:var(--muted)}
+.pub-link{margin-top:auto;padding-top:20px;font-size:13px;font-weight:700;color:var(--accent)}
+
+/* EDUCATION */
+.education{margin-top:55px}
+.edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:25px}
+.edu{border:1px solid var(--line);border-radius:16px;padding:19px;background:white}
+.edu h4{font-family:"Space Grotesk";font-size:16px}
+.edu span{display:block;color:var(--muted);font-size:12px;margin-top:4px}
+
+/* CTA */
+.cta{padding:78px 0;background:var(--ink);color:white}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:35px}
+.cta h2{max-width:650px}
+.cta p{color:#c1ccc8;max-width:650px;margin-top:13px}
+.cta .btn-light{background:white;color:var(--ink);border:0;margin-top:22px}
+.footer{padding:25px 0;background:#101a18;color:#9da9a5;font-size:12px}
+.footer-inner{display:flex;justify-content:space-between;gap:20px}
+.footer a:hover{color:white}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hero-grid,.about-grid{grid-template-columns:1fr}
+  .hero{padding-top:60px}
+  .hero-visual{max-width:430px}
+  .work-grid,.pub-grid{grid-template-columns:1fr 1fr}
+  .skills-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  .container{width:min(100% - 28px,1120px)}
+  .nav{height:68px}
+  .nav-cta{display:none}
+  .hero h1{font-size:43px;letter-spacing:-2px}
+  .hero-copy{font-size:16px}
+  .stats{gap:20px}
+  .section{padding:68px 0}
+  .fact-grid,.work-grid,.pub-grid,.skills-grid,.edu-grid{grid-template-columns:1fr}
+  .timeline-item{grid-template-columns:1fr;gap:7px;padding-bottom:34px}
+  .cta-inner{display:block}
+  .strip-inner{gap:8px;display:grid;grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a href="#top" class="brand">KSC<span>.</span></a>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#work">Impact Work</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#publications">Publications</a>
+    </nav>
+    <a class="nav-cta" href="https://www.linkedin.com/in/krishnapal-singh-chauhan-5362801bb" target="_blank" rel="noopener">Connect ↗</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">DISTRICT IMPACT • M&E • DATA</div>
+      <h1>Turning field data into <em>better decisions.</em></h1>
+      <p class="hero-copy">District Impact Specialist working across rural education, monitoring, data quality and field operations — with 8+ years of experience in education and rural development.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#work">Explore my work ↓</a>
+        <a class="btn btn-light" href="https://www.linkedin.com/in/krishnapal-singh-chauhan-5362801bb" target="_blank" rel="noopener">LinkedIn ↗</a>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>8+</strong><span>Years experience</span></div>
+        <div class="stat"><strong>M&E</strong><span>Monitoring & data</span></div>
+        <div class="stat"><strong>MP</strong><span>Rural education</span></div>
+      </div>
+    </div>
+
+    <aside class="profile-card">
+      <div class="photo-wrap">
+        <img src="assets/profile.jpg" alt="Krishnapal Singh Chauhan" onerror="this.style.display='none'">
+        <span class="photo-fallback">KSC</span>
+      </div>
+      <div class="profile-role">District Impact Specialist</div>
+      <h2>Krishnapal Singh Chauhan</h2>
+      <p>Educate Girls · Madhya Pradesh</p>
+      <div class="tag-list">
+        <span class="tag">Field Monitoring</span>
+        <span class="tag">Data Quality</span>
+        <span class="tag">Root Cause Analysis</span>
+        <span class="tag">Reporting</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="strip">
+  <div class="container strip-inner">
+    <span>Rural Education</span><span>Monitoring & Evaluation</span><span>Data Analytics</span><span>Field Operations</span><span>Community Mobilization</span>
+  </div>
+</div>
+
+<section id="about" class="section">
+  <div class="container about-grid">
+    <div>
+      <div class="section-kicker">01 / ABOUT</div>
+      <h2>Field experience, backed by data.</h2>
+    </div>
+    <div class="about-copy">
+      <p>With over eight years in education and rural development, I've built experience in community mobilization, field-level risk management, reporting and leadership development.</p>
+      <p>As a District Impact Specialist at Educate Girls, I work on strategies that improve educational access and outcomes for girls across Madhya Pradesh, while supporting field teams and operational efficiency.</p>
+      <div class="fact-grid" style="margin-top:28px">
+        <div class="fact"><b>8+</b><span>Years in education & rural development</span></div>
+        <div class="fact"><b>5</b><span>Organizations across the field</span></div>
+        <div class="fact"><b>MSW</b><span>Postgraduate, rural development</span></div>
+        <div class="fact"><b>3</b><span>Published personal-finance guides</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="work" class="section section-alt">
+  <div class="container">
+    <div class="section-kicker">02 / IMPACT WORK</div>
+    <div class="section-head">
+      <div><h2>What I work on</h2><p class="lede">Practical systems that connect field reality with management decisions.</p></div>
+    </div>
+    <div class="work-grid">
+      <article class="work-card featured">
+        <div class="work-no">01</div><h3>M&E Performance & Data Quality</h3>
+        <p>Monitoring, verification, data-quality review and analysis to identify gaps and support action.</p>
+        <div class="pills"><span class="pill">M&E</span><span class="pill">Excel</span><span class="pill">Dashboards</span></div>
+      </article>
+      <article class="work-card">
+        <div class="work-no">02</div><h3>Field Verification</h3>
+        <p>Ground-level checks, contact verification and evidence-based review of program implementation.</p>
+        <div class="pills"><span class="pill">Field Data</span><span class="pill">QA</span><span class="pill">Verification</span></div>
+      </article>
+      <article class="work-card">
+        <div class="work-no">03</div><h3>Root Cause Analysis</h3>
+        <p>Moving beyond “how many” to understand “why” and convert field observations into practical solutions.</p>
+        <div class="pills"><span class="pill">RCA</span><span class="pill">Insights</span><span class="pill">Action</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section">
+  <div class="container">
+    <div class="section-kicker">03 / EXPERIENCE</div>
+    <h2>Career journey</h2>
+    <ol class="timeline">
+      <li class="timeline-item"><span class="period">Jun 2025 – Present</span><div><h3>District Impact Specialist</h3><div class="org">Educate Girls · Barwani, Madhya Pradesh</div><p>Leading district-level strategy to improve girls' educational access and outcomes; mentoring field teams and driving operational efficiency.</p></div></li>
+      <li class="timeline-item"><span class="period">Oct 2022 – Jun 2025</span><div><h3>District Impact Associate</h3><div class="org">Educate Girls · Barwani, Madhya Pradesh</div><p>Field-level program delivery and analysis using Microsoft Excel and analytical reporting.</p></div></li>
+      <li class="timeline-item"><span class="period">Jul 2018 – Oct 2022</span><div><h3>Block Coordinator</h3><div class="org">Pratham Education Foundation · Tikamgarh, Madhya Pradesh</div><p>School monitoring, teacher training, community mobilization and team mentoring.</p></div></li>
+      <li class="timeline-item"><span class="period">Apr 2015 – Aug 2016</span><div><h3>Field Executive</h3><div class="org">SHB Financial Services · Gwalior, Madhya Pradesh</div><p>Third-party and document verification.</p></div></li>
+      <li class="timeline-item"><span class="period">Sep 2013 – Dec 2014</span><div><h3>Site Engineer</h3><div class="org">Murugappa Group · Coimbatore, Tamil Nadu</div><p>Measurement, billing, planning and overall construction site management.</p></div></li>
+      <li class="timeline-item"><span class="period">May 2012 – Jul 2013</span><div><h3>Data Entry Clerk</h3><div class="org">SS Infrastructure Private Limited · Nimbahera, Rajasthan</div><p>Data entry and vehicle document verification for mining transport and commercial forest operations.</p></div></li>
+    </ol>
+  </div>
+</section>
+
+<section id="skills" class="section section-alt">
+  <div class="container">
+    <div class="section-kicker">04 / SKILLS</div>
+    <h2>Tools & capabilities</h2>
+    <div class="skills-grid">
+      <div class="skill-card"><h3>Field & Program</h3><ul><li>Community mobilization</li><li>School monitoring</li><li>Teacher training</li><li>Team mentoring</li><li>Field supervision</li><li>Leadership development</li></ul></div>
+      <div class="skill-card"><h3>Data & Analysis</h3><ul><li>Microsoft Excel</li><li>Analytical reporting</li><li>Data verification</li><li>Document verification</li></ul></div>
+      <div class="skill-card"><h3>AI & Emerging Tools</h3><ul><li>Artificial Intelligence</li><li>AI agents</li><li>AI for data workflows</li><li>Automation concepts</li></ul></div>
+      <div class="skill-card"><h3>Core</h3><ul><li>Communication</li><li>Leadership</li><li>Risk management</li><li>Problem solving</li></ul></div>
+    </div>
+
+    <div class="education">
+      <div class="section-kicker">EDUCATION & CERTIFICATIONS</div>
+      <div class="edu-grid">
+        <div class="edu"><h4>Master of Social Work (MSW), Rural Development</h4><span>MMYVV · 2019–2020 · Grade 8.2</span></div>
+        <div class="edu"><h4>Bachelor's Degree, Social Work</h4><span>Mahatma Gandhi Chitrakoot Gramodaya Vishwavidyalaya · 2015–2018</span></div>
+        <div class="edu"><h4>ACABC</h4><span>NABARD · Issued Sep 2016</span></div>
+        <div class="edu"><h4>DCA</h4><span>Rajiv Gandhi Prodyogiki Vishwavidyalaya · Issued Jun 2010</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <div class="section-kicker">05 / PUBLICATIONS</div>
+    <h2>Published guides</h2>
+    <p class="lede">Self-published personal-finance guides.</p>
+    <div class="pub-grid">
+      <a class="pub" href="https://krishxplore.gumroad.com/l/tscbha" target="_blank" rel="noopener"><span class="pub-label">Personal Finance</span><h3>The Debt Exit Plan</h3><p>A practical Indian guide to becoming debt-free.</p><span class="pub-link">View on Gumroad ↗</span></a>
+      <a class="pub" href="https://krishxplore.gumroad.com/l/oljamj" target="_blank" rel="noopener"><span class="pub-label">Personal Finance</span><h3>The Side Income Starter</h3><p>How to earn your first ₹10,000 outside your salary.</p><span class="pub-link">View on Gumroad ↗</span></a>
+      <a class="pub" href="https://krishxplore.gumroad.com/l/investmentplan" target="_blank" rel="noopener"><span class="pub-label">Investing</span><h3>The Beginner Investment Plan</h3><p>A simple guide to investing for first-time investors.</p><span class="pub-link">View on Gumroad ↗</span></a>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <div class="container cta-inner">
+    <div><div class="section-kicker" style="color:#8bd6c3">06 / CONTACT</div><h2>Let's connect around impact, data and better field outcomes.</h2><p>Open to conversations around M&E, program operations, data-driven field work and education-sector opportunities.</p></div>
+    <a class="btn btn-light" href="https://www.linkedin.com/in/krishnapal-singh-chauhan-5362801bb" target="_blank" rel="noopener">Connect on LinkedIn ↗</a>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner"><span>© 2026 Krishnapal Singh Chauhan</span><a href="#top">Back to top ↑</a></div>
+</footer>
+</body>
+</html>
