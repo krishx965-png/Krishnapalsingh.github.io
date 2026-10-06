@@ -1,4 +1,4 @@
-const viewNames=['home','work','projects','books','gallery','contact'];
+const viewNames=['home','work','projects','services','books','gallery','contact'];
 function routeView(){const raw=location.hash.slice(1);const view=raw==='about'?'work':raw==='dashboard'?'projects':viewNames.includes(raw)?raw:'home';document.querySelectorAll('[data-view]').forEach(el=>{el.hidden=el.dataset.view!==view;});document.querySelectorAll('header nav a').forEach(el=>{if(el.hash==='#'+view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});document.title=(view==='home'?'Krishnapal Chauhan':view[0].toUpperCase()+view.slice(1)+' · Krishnapal Chauhan')+' | Impact, Data & Books';window.scrollTo({top:0,behavior:'instant'});}
 window.addEventListener('hashchange',routeView);routeView();
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let paused=reduced;
