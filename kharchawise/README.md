@@ -1,24 +1,22 @@
-# KharchaWise — Free Personal Finance Dashboard (v6)
+# KharchaWise — Free Personal Money Dashboard (v7)
 
-Deploy path: `kharchawise/` inside `krishx965-png/Krishnapalsingh.github.io` (GitHub Pages). Uses Supabase project `thkotqbeeqenpxnwfgih` in Mumbai, India.
+Self-hosted static frontend with Supabase Auth and private finance tables. No subscriptions, payment gateway, bank linking or paid tool requirements.
 
-## How to use
-1. Visit the published HTTPS GitHub Pages `/kharchawise/` URL.
-2. Create an account and verify your email (only authorized email recipients may receive confirmation until a custom SMTP provider is configured).
-3. Log in. Add transactions using `+ Add transaction`. Select a month to review income, expense and savings. Use Transactions to edit/delete, Budgets to set limits, and Recurring to schedule monthly income/bills (no payments are processed).
-4. In **My data & privacy**, download a full JSON backup or CSV files for transactions, budgets and recurring schedules. Downloads fetch fresh data under the current authenticated session, not from another person's browser data.
-5. Import a KharchaWise JSON backup, or delete your own financial records after entering DELETE. Download a backup first.
+**GitHub project:** `krishx965-png/Krishnapalsingh.github.io`, folder `kharchawise/`, deployed via GitHub connector. **Supabase project:** `thkotqbeeqenpxnwfgih`, region Mumbai.
 
-## Technical safeguards
-- Supabase Auth; only an intentionally public publishable key in the browser; no service-role key.
-- RLS enabled on all three database tables; permissions for anonymous clients revoked; authenticated CRUD is constrained to user_id = auth.uid().
-- User-only cloud queries, no guest finance data, visible save errors, spreadsheet injection-safe CSV, validated imports, CSP and safe DOM rendering.
-- Password reset/sign-up need working outbound Auth email. Default Supabase SMTP is restricted, so configure a free-tier SMTP with verified sending domain before inviting general public users.
+## User guide
+1. Open the live HTTPS site and create a free account (after email service is configured).
+2. Confirm email and sign in.
+3. Record income and expenses, set budgets and optional recurring items.
+4. Open **My data & privacy** to export your own CSV and JSON records, import your backup, or delete financial records.
+5. Use a strong unique password and sign out on shared devices. No banking passwords or OTPs.
 
-## Release verification
-- Chrome desktop and mobile browser automation using mocked Supabase client: add/edit transaction, budget, account-only JSON export, signout hiding private data; passed.
-- Real multi-user registration, cloud save/read across devices and authorization isolation with two Supabase Auth accounts **not yet verified**, pending email setup and test users. Do not represent as independently penetration-tested.
-- All software/services remain on free tiers; there is no paid feature, subscription or payment processing.
+## Owner launch checklist
+See FINAL_STATUS.md. Real public account email confirmation and two-user isolation testing are not yet complete. Configuring a verified SMTP service requires access to the Supabase Auth configuration UI, a sender identity/domain and provider credentials. Connected Supabase project tools do not currently expose this configuration. GitHub Pages branch publishing may also require checking in GitHub Settings > Pages.
 
-## Security note
-GitHub Pages is public source hosting. Do not put service-role secrets, private customer data, or provider passwords in GitHub code. Supabase publishable key can be exposed only when RLS is correct. Use HTTPS and review provider quotas.
+## Privacy and security
+- Three Supabase finance tables with RLS, auth.uid()-based per-row permissions, and no `anon` table grants.
+- Public publishable key only in client code; never embed private service-role secrets.
+- Data exports query records under the signed-in account.
+- Privacy and quick start pages in `privacy.html` and `guide.html`.
+- Local simulated browser checks and database policy checks documented in FINAL_STATUS.md.
