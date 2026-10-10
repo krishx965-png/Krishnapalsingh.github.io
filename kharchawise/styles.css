@@ -7,3 +7,12 @@
 /* Optional free Google OAuth; displayed only when enabled in Supabase. */
 .auth-card #googleSignIn{margin-top:16px;font-size:13px}
 .auth-card #googleSignIn>span{font-weight:900;color:#4285f4;font-size:17px}
+
+/* Always-visible account sign-out control. Mobile bottom nav hides sidebar footer. */
+.top-actions .signout-top{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-height:40px;padding:0 15px;border:1px solid #eccbd0;background:#fff2f3;color:#8f2735;border-radius:11px;font-weight:800;font-size:12px;white-space:nowrap;cursor:pointer}
+.top-actions .signout-top:hover{background:#ffe3e7;border-color:#dc9da8;color:#751929}
+.top-actions .signout-top:focus-visible,.signout:focus-visible{outline:3px solid #1a9c8a;outline-offset:3px}
+.top-actions .signout-top:disabled,.sidebar .signout:disabled{opacity:.6;cursor:wait}
+.sidebar .signout{color:#992f3c;font-weight:800;margin:16px 0 0 45px;cursor:pointer}
+@media(max-width:850px){.top-actions .signout-top{flex:0 0 auto;min-height:43px;padding:0 17px}.topbar .top-actions{row-gap:10px}}
+@media(max-width:480px){.topbar .top-actions>.signout-top{flex:0 0 auto;min-width:106px}}
