@@ -58,3 +58,7 @@ dialog{background:linear-gradient(140deg,#25324d,#302446);border-color:#655789}d
 :is(.bio-card,.experience-panel,.book-experience,.service-contact) em{color:#bda5ff}
 .service-process span{color:#7045d9}.data-details summary{color:#8ceedd}.gallery .album-empty p{color:#bec7e0}footer{background:#ffffff50;color:#526079}
 @media(max-width:760px){.book-experience{padding:22px 18px}}
+
+/* Book format actions */
+#buyBook, #buyPrintBook { margin-top:16px; margin-right:20px; }
+#buyPrintBook[hidden] { display:none!important; }
