@@ -1,0 +1,11 @@
+{
+  "sqlite": "passed",
+  "queries_executed": 18,
+  "integrity_check": "ok",
+  "foreign_keys": "passed",
+  "duplicate_and_range_rejection": "passed",
+  "control_totals": "passed",
+  "mysql": "native runtime not tested",
+  "postgresql": "native runtime not tested",
+  "sqlserver": "native runtime not tested"
+}
