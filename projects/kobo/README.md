@@ -25,7 +25,7 @@ The operational school master and real XLSForms are not included in this public 
 
 Operational lookup expressions were checked offline for all 40 eligible school records, along with key branches. The public rule engine is checked against the questionnaire expressions and representative yes/no paths. Browser and device compatibility still require field testing.
 
-Native KoboToolbox import, deployment and KoboCollect testing remain pending. This website is a portfolio demonstration, not a deployed collection service. No field outcomes or response totals are claimed.
+The owner has confirmed deployment and checking of the operational forms. Production collection links are not listed in this public case study; native KoboCollect runtime has not been reviewed here. This website uses synthetic data and does not send responses to the operational forms. No field outcomes or response totals are claimed.
 
 ## Files
 
