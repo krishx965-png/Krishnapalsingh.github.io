@@ -81,3 +81,13 @@ dialog{background:linear-gradient(140deg,#25324d,#302446);border-color:#655789}d
 .book-selector{grid-template-columns:repeat(5,minmax(0,1fr))}
 @media(max-width:980px){.book-selector{grid-template-columns:repeat(3,minmax(0,1fr))}}
 @media(max-width:680px){.book-selector{grid-template-columns:repeat(2,minmax(0,1fr))}.store-book-product .store-book-cover-wrap{height:205px}}
+
+/* Balanced Excel templates on Services — distinct workbooks, distinct Drive links. */
+#resource-templates .resource-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+#resource-templates .resource-card{min-height:238px;display:flex;flex-direction:column;align-items:flex-start}
+#resource-templates .resource-card:nth-child(odd):last-child{grid-column:1/-1;min-height:195px}
+#resource-templates .resource-card .text-link{margin-top:auto;display:inline-block;padding-top:13px}
+#resource-templates .excel-resource-kicker{font-size:11px;font-weight:800;letter-spacing:1.25px;color:#87edda;margin:0 0 14px}
+#resource-templates .excel-resource-description{font-size:12px;opacity:.9}
+#resource-templates .excel-resource-note{font-size:13px;color:var(--muted);margin-top:22px}
+@media(max-width:660px){#resource-templates .resource-grid{grid-template-columns:1fr}#resource-templates .resource-card:nth-child(odd):last-child{grid-column:auto}#resource-templates .resource-card{min-height:0}}
