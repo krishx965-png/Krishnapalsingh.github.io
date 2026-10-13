@@ -1,4 +1,4 @@
-const viewNames=['home','work','projects','services','gallery','contact'];
+const viewNames=['home','work','projects','services','store','gallery','contact'];
 function routeView(){const raw=location.hash.slice(1);const view=raw==='about'?'work':raw==='books'?'services':raw==='dashboard'?'projects':viewNames.includes(raw)?raw:'home';document.querySelectorAll('[data-view]').forEach(el=>{el.hidden=el.dataset.view!==view;});document.querySelectorAll('header nav a').forEach(el=>{if(el.hash==='#'+view)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});document.title=(view==='home'?'Krishnapal Chauhan':view[0].toUpperCase()+view.slice(1)+' · Krishnapal Chauhan')+' | Impact, Data & Books';window.scrollTo({top:0,behavior:'instant'});}
 window.addEventListener('hashchange',routeView);routeView();
 const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;let paused=reduced;
@@ -25,3 +25,15 @@ function emiCalc(){const p=document.getElementById('emi-principal').valueAsNumbe
 ['income','expenses','savings'].forEach(k=>document.getElementById('budget-'+k).addEventListener('input',budgetCalc));['principal','rate','months'].forEach(k=>document.getElementById('emi-'+k).addEventListener('input',emiCalc));budgetCalc();emiCalc();
 const templates={budget:{name:'Monthly_Budget_Tracker.csv',text:'Month,Income,Expense category,Expense amount,Planned savings,Notes\n,,,,,\n'},field:{name:'Field_Action_Tracker.csv',text:'Date,District,Block,Village,Issue,Evidence,Action,Owner,Due date,Status\n,,,,,,,,,\n'},content:{name:'Content_Calendar.csv',text:'Date,Platform,Topic,Format,Hook,Caption,Status\n,,,,,,\n'},debt:{name:'Debt_Tracker.csv',text:'Lender,Opening balance,Annual rate,Monthly payment,Due date,Payment made,Remaining balance,Notes\n,,,,,,,\n'}};
 document.querySelectorAll('[data-download]').forEach(b=>b.addEventListener('click',()=>{const t=templates[b.dataset.download],blob=new Blob(['\uFEFF'+t.text],{type:'text/csv;charset=utf-8;'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=t.name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}));
+
+
+/* Store filtering and safe navigation back to the book catalogue. */
+const storeFilters=[...document.querySelectorAll('[data-store-filter]')];
+const storeCards=[...document.querySelectorAll('[data-store-type]')];
+storeFilters.forEach(filter=>filter.addEventListener('click',()=>{
+  const current=filter.dataset.storeFilter;
+  storeFilters.forEach(b=>{const selected=b===filter;b.classList.toggle('is-active',selected);b.setAttribute('aria-pressed',String(selected));});
+  let visible=0;
+  storeCards.forEach(card=>{const show=current==='all'||card.dataset.storeType===current;card.hidden=!show;if(show)visible++;});
+  const count=document.querySelector('#store-result-count');if(count)count.textContent=String(visible);
+}));
