@@ -91,3 +91,7 @@ dialog{background:linear-gradient(140deg,#25324d,#302446);border-color:#655789}d
 #resource-templates .excel-resource-description{font-size:12px;opacity:.9}
 #resource-templates .excel-resource-note{font-size:13px;color:var(--muted);margin-top:22px}
 @media(max-width:660px){#resource-templates .resource-grid{grid-template-columns:1fr}#resource-templates .resource-card:nth-child(odd):last-child{grid-column:auto}#resource-templates .resource-card{min-height:0}}
+
+/* Uploaded book promotional images — contain the full original artwork. */
+.store-book-product .store-book-cover-wrap img.store-salary-mockup{border-radius:10px;max-height:100%;max-width:100%;object-fit:contain;box-shadow:0 15px 30px #1e2f4440}
+.store-book-product .store-book-cover-wrap img{object-fit:contain}
