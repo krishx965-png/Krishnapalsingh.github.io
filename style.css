@@ -69,3 +69,15 @@ dialog{background:linear-gradient(140deg,#25324d,#302446);border-color:#655789}d
 @media(max-width:980px){.store-hero{padding:42px 30px;gap:18px}.store-card{grid-column:span 3}.store-featured{grid-column:span 3}.store-hero-visual{height:270px}}
 @media(max-width:680px){.digital-store{padding-top:25px}.store-hero{display:block;padding:33px 23px}.store-hero h1{font-size:clamp(36px,9vw,48px)}.store-hero-visual{height:255px;margin-top:25px}.store-note-top{right:2px}.store-note-bottom{left:2px}.store-heading-row{margin-top:40px;align-items:start}.store-count{min-width:65px;display:block}.store-count strong{display:block;line-height:1}.store-count span{display:block;font-size:10px;line-height:1.4;margin-top:5px}.store-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:16px}.store-card,.store-featured{grid-column:auto}.store-card-visual{height:220px}.store-card-body{padding:23px}.store-bottom-note{display:block;padding:25px}.store-bottom-note .button{margin-top:20px}.store-filters{gap:7px}.store-filter{padding:9px 13px;font-size:12px}header nav{gap:9px 15px}}
 @media(prefers-reduced-motion:reduce){.store-card{transition:none}}
+
+
+/* Individual book listings in the Digital Store. */
+.store-book-product .store-book-cover-wrap{height:230px;display:flex;align-items:center;justify-content:center;padding:21px;background:radial-gradient(ellipse at top right,#dfd5ff,transparent 70%),linear-gradient(145deg,#f4f5fa,#e9f1f3)}
+.store-book-product .store-book-cover-wrap img{max-width:100%;height:100%;width:auto;object-fit:contain;box-shadow:7px 12px 25px #24314a45;border-radius:2px}
+.store-book-product .store-card-body{min-height:260px}
+.store-book-product .store-book-actions{margin-top:auto;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;width:100%}
+.store-book-product .store-book-alternate{color:#496486;border-bottom:1px solid #aabfd1;font-weight:700;font-size:13px;padding:6px 0}
+.store-book-product .store-preview-note{font-size:11px;color:#7a6382;margin-top:-5px}
+.book-selector{grid-template-columns:repeat(5,minmax(0,1fr))}
+@media(max-width:980px){.book-selector{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:680px){.book-selector{grid-template-columns:repeat(2,minmax(0,1fr))}.store-book-product .store-book-cover-wrap{height:205px}}
