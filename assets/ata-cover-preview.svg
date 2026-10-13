@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 680" width="480" height="680" role="img" aria-label="Illustrative preview for अटा का तीसवाँ पन्ना">
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f6eddb"/><stop offset="1" stop-color="#c8a57b"/></linearGradient><filter id="paper"><feDropShadow dx="0" dy="9" stdDeviation="9" flood-color="#49311d" flood-opacity=".27"/></filter></defs>
+<rect width="480" height="680" fill="url(#bg)"/><rect x="24" y="24" width="432" height="632" rx="3" fill="none" stroke="#725138" stroke-width="2" opacity=".75"/>
+<circle cx="402" cy="108" r="79" fill="#9b6744" opacity=".16"/>
+<path d="M35 430 Q160 336 256 438 T473 432" fill="none" stroke="#866245" stroke-width="5" opacity=".22"/>
+<g filter="url(#paper)" transform="rotate(-9 246 410)"><rect x="130" y="305" width="224" height="248" rx="5" fill="#f7ebd5" stroke="#bda78b"/><path d="M152 348h175M152 371h157M152 394h174M152 417h145M152 440h163M152 463h122" stroke="#ad9980" stroke-width="2" opacity=".6"/><path d="M160 505L333 335" stroke="#704c39" stroke-width="3" opacity=".6"/></g>
+<text x="240" y="134" fill="#443022" font-size="49" font-weight="800" text-anchor="middle" font-family="sans-serif">अटा का</text>
+<text x="240" y="197" fill="#443022" font-size="51" font-weight="800" text-anchor="middle" font-family="sans-serif">तीसवाँ पन्ना</text>
+<line x1="128" y1="224" x2="352" y2="224" stroke="#9a6b49" stroke-width="2"/>
+<text x="240" y="595" fill="#503525" font-size="24" text-anchor="middle" font-family="serif">Prince J. Chauhan</text>
+<text x="240" y="631" fill="#6b5344" font-size="13" text-anchor="middle" font-family="sans-serif" letter-spacing="2">ILLUSTRATIVE COVER PREVIEW</text></svg>
